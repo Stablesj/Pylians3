@@ -10,7 +10,7 @@ import numpy
 ext_modules = [
     Extension("MAS_library.MAS_library", ["MAS_library/MAS_library.pyx",
                                           "MAS_library/MAS_c.c"],
-        extra_compile_args=['-O3','-ffast-math','-march=native','-fopenmp'],
+        extra_compile_args=['-O3','-ffast-math','-march=native'],
             libraries=['m']),
 
     Extension("Pk_library.Pk_library", ["Pk_library/Pk_library.pyx"],
