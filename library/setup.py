@@ -11,10 +11,10 @@ ext_modules = [
     Extension("MAS_library.MAS_library", ["MAS_library/MAS_library.pyx",
                                           "MAS_library/MAS_c.c"],
         extra_compile_args=['-O3','-ffast-math','-march=native','-fopenmp'],
-              extra_link_args=['-fopenmp'], libraries=['m']),
+            libraries=['m']),
 
     Extension("Pk_library.Pk_library", ["Pk_library/Pk_library.pyx"],
-        extra_compile_args = ['-O3','-ffast-math','-march=native','-fopenmp']),
+        extra_compile_args = ['-O3','-ffast-math','-march=native']),
 
     Extension("Pk_library.bispectrum_library",
         ["Pk_library/bispectrum_library.pyx"]),
@@ -27,14 +27,12 @@ ext_modules = [
 
     Extension("smoothing_library.smoothing_library",
               ["smoothing_library/smoothing_library.pyx"],
-        extra_compile_args = ['-O3','-ffast-math','-march=native','-fopenmp'],
-        extra_link_args=['-fopenmp'], libraries=['m']),
+        extra_compile_args = ['-O3','-ffast-math','-march=native'], libraries=['m']),
 
     Extension("void_library.void_library", 
               ["void_library/void_library.pyx",
                "void_library/void_openmp_library.c"],
-        extra_compile_args = ['-O3','-ffast-math','-march=native','-fopenmp'],
-        extra_link_args=['-fopenmp'], libraries=['m']),
+        extra_compile_args = ['-O3','-ffast-math','-march=native'], libraries=['m']),
 
     Extension("integration_library.integration_library",
               ["integration_library/integration_library.pyx",
