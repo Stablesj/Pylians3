@@ -1094,7 +1094,7 @@ class XPk_plane:
     def __init__(self, delta1, delta2, BoxSize, MAS1=None, MAS2=None, threads=1):
 
          start = time.time()
-	 cdef int grid, middle, fields, i, j
+         cdef int grid, middle, fields, i, j
          cdef int index, kxx, kyy, kx, ky, k_index
          cdef int kmax_par, kmax_per, kmax
          cdef double k, prefact
@@ -1194,7 +1194,7 @@ class XPk_plane:
 
                  ####### compute XPk for each pair #######
                  deltaX_2 = real_part[0]*real_part[1] +\
-                            imag_part[0]*imag_part[1]            
+                            imag_part[0]*imag_part[1]
 
                  # XPk2D
                  PkX2D[k_index] += deltaX_2
@@ -1205,7 +1205,7 @@ class XPk_plane:
 
          # Pk2D. Check modes, discard DC mode bin and give units
          # we need to multiply the multipoles by (2*ell + 1)
-         k2D  = k2D[1:];  Nmodes2D = Nmodes2D[1:];  
+         k2D  = k2D[1:];  Nmodes2D = Nmodes2D[1:];
          Pk2D = Pk2D[1:,:];  PkX2D = PkX2D[1:]
          for i in range(len(k2D)):
              k2D[i] = (k2D[i]/Nmodes2D[i])*kF
@@ -1218,8 +1218,8 @@ class XPk_plane:
          self.r  = self.XPk/np.sqrt(self.Pk[:,0]*self.Pk[:,1])
 
          print('Time taken = %.2f seconds'%(time.time()-start))
- ################################################################################
- ################################################################################
+################################################################################
+################################################################################
 
 
 ################################################################################
