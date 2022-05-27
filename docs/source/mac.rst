@@ -44,7 +44,7 @@ Many thanks to Alexander Gough for this!
    For M1 mac users the instructions are similar but:
 
    - verify that clang version is >=13
-   - replace “-march=native” by “mcpu=apple-m1”
+   - replace “-march=native” by “-mcpu=apple-m1”
    - use CC=clang python setup.py install
 
    Thanks for Valerio Marra for this!
