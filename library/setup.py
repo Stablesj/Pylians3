@@ -10,11 +10,11 @@ import numpy
 ext_modules = [
     Extension("MAS_library.MAS_library", ["MAS_library/MAS_library.pyx",
                                           "MAS_library/MAS_c.c"],
-        extra_compile_args=['-O3','-ffast-math','-march=native'],
+        extra_compile_args=['-O3','-ffast-math','-mcpu=apple-m1'],
             libraries=['m']),
 
     Extension("Pk_library.Pk_library", ["Pk_library/Pk_library.pyx"],
-        extra_compile_args = ['-O3','-ffast-math','-march=native']),
+        extra_compile_args = ['-O3','-ffast-math','-mcpu=apple-m1']),
 
     Extension("Pk_library.bispectrum_library",
         ["Pk_library/bispectrum_library.pyx"]),
@@ -27,25 +27,25 @@ ext_modules = [
 
     Extension("smoothing_library.smoothing_library",
               ["smoothing_library/smoothing_library.pyx"],
-        extra_compile_args = ['-O3','-ffast-math','-march=native'], libraries=['m']),
+        extra_compile_args = ['-O3','-ffast-math','-mcpu=apple-m1'], libraries=['m']),
 
     Extension("void_library.void_library", 
               ["void_library/void_library.pyx",
                "void_library/void_openmp_library.c"],
-        extra_compile_args = ['-O3','-ffast-math','-march=native'], libraries=['m']),
+        extra_compile_args = ['-O3','-ffast-math','-mcpu=apple-m1'], libraries=['m']),
 
     Extension("integration_library.integration_library",
               ["integration_library/integration_library.pyx",
                "integration_library/integration.c",
                "integration_library/runge_kutta.c"],
-              extra_compile_args=["-O3","-ffast-math","-march=native"]),
+              extra_compile_args=["-O3","-ffast-math","-mcpu=apple-m1"]),
 
     Extension("density_field_library.density_field_library", 
               ["density_field_library/density_field_library.pyx"]),
 
     Extension("sorting_library.sorting_library", 
               ["sorting_library/sorting_library.pyx"],
-              extra_compile_args=['-O3','-ffast-math','-march=native']),
+              extra_compile_args=['-O3','-ffast-math','-mcpu=apple-m1']),
 
     Extension("HI_library.HI_library",
               ["HI_library/HI_library.pyx"]),
